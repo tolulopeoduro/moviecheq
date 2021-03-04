@@ -1,0 +1,25 @@
+.Form {
+    border: 0px solid rgb(207, 207, 207);
+    width : 140px;
+    height: 40px;
+    display: flex;
+    background-color: white;
+    margin-left: 10px;
+}
+
+.Form > input {
+    height: inherit;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    width: 100;
+    outline: none;
+}
+
+.Form > button {
+    height: inherit;
+    width: 40px;
+    padding: auto;
+    border: 1px solid rgb(134, 52, 52);
+    color : white;
+    background-color: rgb(134, 52, 52);
+}

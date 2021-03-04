@@ -1,0 +1,53 @@
+.Nav {
+    width: 80vw;
+    border : 1px solid rgb(63, 24, 24);
+    background-color: rgb(87, 24, 24);
+    height: 70vh;
+    box-sizing: border-box;
+    position: fixed;
+    top: 60px
+}
+
+.LogoAndMenuButton {
+    display: flex;
+    background-color: rgb(87, 34, 34);
+    justify-content: space-between;
+    padding: 10px 10px;
+    color: rgb(207, 207, 207);
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    height: 60px;
+    box-sizing: border-box;
+}
+
+.LinkSection {
+    margin-top: 20px;
+}
+
+.LinkSection > span {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 5px;
+    border-bottom: 1px solid black;
+    margin-bottom: 5px;
+}
+
+.LinkSection > ul {
+    margin-top: 5px;
+    color: white;
+    list-style: none;
+    margin-left: 40px;
+}
+
+.LinkSection > ul > li {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 765px){
+    .Nav {
+        width : 300px;
+        height: 100vh;
+    }
+}
