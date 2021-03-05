@@ -1,0 +1,23 @@
+.PageDial {
+    margin: 0px auto;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+
+.PageDial > .PageButton {
+    border: 1px solid gainsboro;
+    background-color: gainsboro;
+    font-size: 20px;
+    outline: none;
+}
+
+.PageDial > .PageButton:disabled {
+    opacity: 0.8;
+}
+
+.PageDial > span {
+    font-size: 20px;
+}
