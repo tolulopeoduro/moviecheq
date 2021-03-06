@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
 import Backdrop from "./Backdrop/Backdrop";
 import MenuButton from "./MenuButton/MenuButton";
 import classes from "./Nav.module.css"
@@ -8,7 +9,14 @@ class Nav extends Component {
     state = {
         show : false
     }
+
+    
     render(){
+        const activeStyle = {
+            color : "black",
+            fontSize : "25px",
+            backgroundColor : "rgba(300, 300, 300, 0.4)",
+        }
         return(
             <div>
                 <div className = {classes.LogoAndMenuButton}>
@@ -20,15 +28,15 @@ class Nav extends Component {
                     <div className = {classes.LinkSection}>
                         <span>Movies</span>
                         <ul>
-                            <li>Top-rated movies</li>
-                            <li>Popular movie</li>
+                            <li><NavLink activeStyle = {activeStyle} to = "/movies/top-rated">Top Rated</NavLink></li>
+                            <li><NavLink activeStyle = {activeStyle} to = "/movies/popular">Popular movies</NavLink></li>
                         </ul>
                     </div>
                     <div className ={classes.LinkSection}>
                         <span>TV</span>
                         <ul>
-                            <li>Airing Today</li>
-                            <li>Popular Shows</li>
+                            <li><NavLink activeStyle = {activeStyle} to = "/tv/Airing-today">Airing Today</NavLink></li>
+                            <li><NavLink activeStyle = {activeStyle} to = "/tv/popular">Popular shows</NavLink></li>
                         </ul>
                     </div>
                 </div>

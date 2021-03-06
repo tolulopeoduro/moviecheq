@@ -13,6 +13,7 @@
     display: flex;
     background-color: rgb(87, 34, 34);
     justify-content: space-between;
+    flex-direction: row;
     padding: 10px 10px;
     color: rgb(207, 207, 207);
     position: fixed;
@@ -22,8 +23,12 @@
     box-sizing: border-box;
 }
 
+.a {
+
+}
+
 .LinkSection {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .LinkSection > span {
@@ -32,6 +37,7 @@
     padding-right: 5px;
     border-bottom: 1px solid black;
     margin-bottom: 5px;
+    background-color: #fff;
 }
 
 .LinkSection > ul {
@@ -42,9 +48,22 @@
 }
 
 .LinkSection > ul > li {
+    color: #fff;
     font-size: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+a:hover {
+    background-color: rgba(300, 300, 300, 0.4);
+    border-bottom: 1px solid white;
+}
+
 
 @media (min-width: 765px){
     .Nav {
