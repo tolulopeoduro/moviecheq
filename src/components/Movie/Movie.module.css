@@ -47,7 +47,7 @@ hr {
 
 .Movie:hover > .Gradient > .Details .Title ,
  .Movie:hover > .Gradient > .Details > .Year{
-    font-size: 30px;
+    font-size: 21px;
 }
 
 .Gradient > .Details > .Title , 

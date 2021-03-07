@@ -51,7 +51,7 @@ hr {
 }
 
 .Show:hover > .Gradient > .Details > .Year {
-    font-size: 20px;
+    font-size: 21px;
 }
 
 .Gradient > .Details > .Name , 
@@ -62,7 +62,7 @@ hr {
 
 
 @media (min-width : 765px) {
-    .Movie {
+    .Show {
         height: 350px;
         font-size: large;
     }
