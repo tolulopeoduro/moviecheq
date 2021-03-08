@@ -5,7 +5,7 @@
     height: 70vh;
     box-sizing: border-box;
     position: fixed;
-    top: 60px;
+    top: 10vh;
     z-index: 100;
 }
 
@@ -19,7 +19,7 @@
     position: fixed;
     width: 100vw;
     z-index: 1000;
-    height: 60px;
+    height: 10vh;
     box-sizing: border-box;
 }
 

@@ -23,7 +23,7 @@ class Movies extends Component {
         .then(response => {
             console.log(response.data)
             this.setState({results : response.data.results , maxPage : response.data.total_pages})
-            setTimeout(() => this.setState({isReady : true}), 200)
+            this.setState({isReady : true})
         })
         .catch(error => console.log(error))
         window.scrollTo({
@@ -46,7 +46,8 @@ class Movies extends Component {
                     <Movie key = {item.id} id ={item.id}
                     poster = {"https://image.tmdb.org/t/p/w300" + item.poster_path}
                     title ={item.title} rating = {item.vote_average}
-                    year = {item.release_date ? item.release_date.split("-")[0] : "N/A"} />
+                    year = {item.release_date ? item.release_date.split("-")[0] : "N/A"}
+                    handleClick = {() => this.props.history.replace("/movie/" + item.id)} />
                 ) 
             } else if (item.first_air_date) {
                 return(
@@ -54,7 +55,8 @@ class Movies extends Component {
                     poster = {"https://image.tmdb.org/t/p/w300" + item.poster_path}
                     name = {item.name}
                     year = {item.first_air_date.split("-")[0]}
-                    rating = {item.vote_average} />
+                    rating = {item.vote_average}
+                    handleClick = {() => this.props.history.replace("/tv/" + item.id)} />
                 ) 
             }
         })

@@ -21,7 +21,7 @@ class SearchResults extends Component {
     componentDidMount () {
         console.log(this.props.match)
         this.setState({isReady : false})
-        document.title = this.props.pageTitle;
+        document.title = "You searched for: " + this.state.keyword;
         axios.get(this.props.url + this.state.keyword + "&page=" + this.state.page)
         .then(response => {
             console.log(response.data)
@@ -68,15 +68,18 @@ class SearchResults extends Component {
                 <div className = {classes.Container}>
                     {this.state.isReady ? 
                     <div>
-                        <h1>{this.props.pageTitle}</h1>
+                        <h1>{"You searched for: " + this.state.keyword}</h1>
                     </div> : null}
-                    {this.state.isReady ? 
+                    {this.state.isReady && this.state.results.length > 0 ? 
                     <div className = {classes.Search}>
                         {list}
                     </div>
+                    : this.state.results.length === 0 ? 
+                    <p>Sorry...We couldn't find anything related.</p>
                     : <Spinner/>
                     }
                 </div>
+                {this.state.isReady && this.state.results > 0 ?
                 <PageDial page = {this.state.page} 
                 maxPage = {this.state.maxPage}
                 toPrev ={() => this.setState((prevState) => {
@@ -86,6 +89,8 @@ class SearchResults extends Component {
                    return {page : prevState.page + 1}
                 })}
                 />
+                : null
+                }
             </React.Fragment>
         )
     }
